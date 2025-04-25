@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text('hello GitHup'),
+          child: Text('hello GitHub'),
         ),
       ),
     );
