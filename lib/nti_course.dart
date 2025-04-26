@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nti_course/features/auth/views/register_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,15 +11,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Lexend Deca',
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('hello GitHub',
-            style: TextStyle(
-                fontSize: 85,
-                fontWeight: FontWeight.w900
-            ),),
-        ),
-      ),
+      home: RegisterView(),
     );
   }
 }
