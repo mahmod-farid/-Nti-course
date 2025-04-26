@@ -6,10 +6,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Lexend Deca',
+      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text('hello GitHub'),
+          child: Text('hello GitHub',
+            style: TextStyle(
+                fontSize: 85,
+                fontWeight: FontWeight.w900
+            ),),
         ),
       ),
     );
