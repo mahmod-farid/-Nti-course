@@ -1,14 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:nti_course/core/localization/app_strings.dart';
+import 'package:nti_course/core/utils/app_pading.dart';
+import 'package:nti_course/core/utils/app_sizes.dart';
+import 'package:nti_course/core/widgets/default_btn.dart';
+import 'package:nti_course/features/auth/views/widgets/default_auth_form_field.dart';
 
 class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+   LoginView({super.key});
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text (AppStrings.login),
+        centerTitle: true,
+      ),
+      body: Padding(
+        padding: AppPadings.pagePadding,
+        child: Column(
+          children: [
+            SizedBox(height: AppSizes.spaceAboveForm),
+            DefaultAuthFormField(
+              controller: emailController,
+            ),
+            DefaultAuthFormField(
+              controller: passwordController,
+            ),
+
+
+            SizedBox(
+              width: double.infinity,
+              child: DefaultBtn(
+                  text: AppStrings.register.toUpperCase(),
+                  onPressed:(){}
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

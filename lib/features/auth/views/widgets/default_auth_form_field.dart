@@ -23,7 +23,7 @@ class DefaultAuthFormField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
                 borderRadius: AppBorders.formFieldBorderRadius,
                 borderSide: BorderSide(
-                    color: AppColors.green
+                    color: AppColors.primary
                 )
             )
         ),

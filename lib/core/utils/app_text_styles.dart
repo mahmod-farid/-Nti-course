@@ -3,7 +3,7 @@ import 'package:nti_course/core/utils/app_colors.dart';
 
 abstract class AppTextStyles
 {
-  static  TextStyle appBarTitle({Color color = AppColors.green}) => TextStyle(
+  static  TextStyle appBarTitle({Color color = AppColors.primary}) => TextStyle(
     fontSize: 25,
     fontWeight: FontWeight.w500,
     color: color,
