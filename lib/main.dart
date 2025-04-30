@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nti_course/features/auth/views/login_view.dart';
 import 'package:nti_course/features/auth/views/register_view.dart';
 import 'package:nti_course/nti_course.dart';
+import 'package:nti_course/features/auth/views/splash.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginView(),
+      home: splash(),
 
     );
   }

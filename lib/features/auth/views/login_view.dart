@@ -6,6 +6,7 @@ import 'package:nti_course/core/utils/app_pading.dart';
 import 'package:nti_course/core/utils/app_sizes.dart';
 import 'package:nti_course/core/widgets/default_btn.dart';
 import 'package:nti_course/features/auth/views/widgets/default_auth_form_field.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LoginView extends StatelessWidget {
    LoginView({super.key});
@@ -25,7 +26,7 @@ class LoginView extends StatelessWidget {
                SizedBox(
                   height: MediaQuery.of(context).size.height * 0.25,
                   width: double.infinity,
-                  child: Image.asset(AppAssets.greenTrue),
+                  child: SvgPicture.asset(AppAssets.palestin),
               
               ),
 

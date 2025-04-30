@@ -5,6 +5,8 @@ import 'package:nti_course/core/utils/app_sizes.dart';
 import 'widgets/default_auth_form_field.dart';
 import 'package:nti_course/core/widgets/default_btn.dart';
 import 'package:nti_course/core/utils/app_assets.dart';
+import 'package:flutter_svg/svg.dart';
+
 
 class RegisterView extends StatelessWidget {
   RegisterView({super.key});
@@ -27,9 +29,9 @@ class RegisterView extends StatelessWidget {
               padding: AppPadings.pagePadding,
               child:
               SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.36,
+                  height: MediaQuery.of(context).size.height * 0.44,
                   width: double.infinity,
-                  child: Image.asset(AppAssets.palestin , fit: BoxFit.fill),
+                  child: SvgPicture.asset(AppAssets.palestin , fit: BoxFit.fill),
               ),
             ),
             DefaultAuthFormField(
