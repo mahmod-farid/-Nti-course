@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nti_course/core/localization/app_strings.dart';
+import 'package:nti_course/core/utils/app_assets.dart';
+import 'package:nti_course/core/utils/app_colors.dart';
 import 'package:nti_course/core/utils/app_pading.dart';
 import 'package:nti_course/core/utils/app_sizes.dart';
 import 'package:nti_course/core/widgets/default_btn.dart';
@@ -15,15 +17,18 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text (AppStrings.login),
-        centerTitle: true,
-      ),
       body: Padding(
         padding: AppPadings.pagePadding,
         child: Column(
           children: [
-            SizedBox(height: AppSizes.spaceAboveForm),
+
+               SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  width: double.infinity,
+                  child: Image.asset(AppAssets.greenTrue),
+              
+              ),
+
             DefaultAuthFormField(
               controller: emailController,
             ),
@@ -35,9 +40,30 @@ class LoginView extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: DefaultBtn(
-                  text: AppStrings.register.toUpperCase(),
+                  text: AppStrings.login.toUpperCase(),
                   onPressed:(){}
               ),
+            ),
+            Padding(
+             padding: const EdgeInsets.only(top: 40),
+             child: RichText(text: TextSpan(
+               text: "Don't have an Account?      ",
+               style: TextStyle(
+                 color: AppColors.black,
+                 fontWeight: FontWeight.w300,
+                 fontSize: 17,
+               ),
+
+               children: [
+                 TextSpan(
+                   text: 'Register',
+                   style: TextStyle(
+                     color: AppColors.black,
+                     fontWeight: FontWeight.bold,
+                   )
+                 )
+               ]
+             )),
             )
           ],
         ),

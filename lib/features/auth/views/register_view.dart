@@ -4,26 +4,34 @@ import 'package:nti_course/core/utils/app_pading.dart';
 import 'package:nti_course/core/utils/app_sizes.dart';
 import 'widgets/default_auth_form_field.dart';
 import 'package:nti_course/core/widgets/default_btn.dart';
+import 'package:nti_course/core/utils/app_assets.dart';
 
 class RegisterView extends StatelessWidget {
-   RegisterView({super.key});
+  RegisterView({super.key});
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController passwordConfirmController = TextEditingController();
+  final TextEditingController passwordConfirmController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text (AppStrings.register),
-        centerTitle: true,
-      ),
-      body: Padding(
-        padding: AppPadings.pagePadding,
-        child: Column(
+      backgroundColor: Color(0xffF3F5F4),
+       body:
+      // Padding(
+      //   padding: const EdgeInsets.all(10.0),
+        Column(
           children: [
-            SizedBox(height: AppSizes.spaceAboveForm),
+            Padding(
+              padding: AppPadings.pagePadding,
+              child:
+              SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.36,
+                  width: double.infinity,
+                  child: Image.asset(AppAssets.palestin , fit: BoxFit.fill),
+              ),
+            ),
             DefaultAuthFormField(
               controller: nameController,
             ),
@@ -36,21 +44,14 @@ class RegisterView extends StatelessWidget {
             DefaultAuthFormField(
               controller: passwordConfirmController,
             ),
-
             SizedBox(
               width: double.infinity,
               child: DefaultBtn(
-              text: AppStrings.register.toUpperCase(),
-              onPressed:(){}
-              ),
+                  text: AppStrings.register.toUpperCase(), onPressed: () {}),
             )
-
           ],
         ),
-      ),
-    );
+      );
+
   }
 }
-
-
-
