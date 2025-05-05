@@ -24,9 +24,9 @@ class LoginView extends StatelessWidget {
           children: [
 
                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.25,
+                  height: MediaQuery.of(context).size.height * 0.45,
                   width: double.infinity,
-                  child: SvgPicture.asset(AppAssets.palestin),
+                  child: Image.asset(AppAssets.palestin),
               
               ),
 

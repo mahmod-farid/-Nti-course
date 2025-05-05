@@ -31,7 +31,7 @@ class RegisterView extends StatelessWidget {
               SizedBox(
                   height: MediaQuery.of(context).size.height * 0.44,
                   width: double.infinity,
-                  child: SvgPicture.asset(AppAssets.palestin , fit: BoxFit.fill),
+                  child: Image.asset(AppAssets.palestin , fit: BoxFit.fill),
               ),
             ),
             DefaultAuthFormField(

@@ -12,7 +12,7 @@ class MyContainers extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 20),
         child: Container(
           width: 365,
-          height: 105,
+          height: 115,
           decoration: BoxDecoration(
             boxShadow: [
                BoxShadow(

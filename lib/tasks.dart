@@ -11,32 +11,68 @@ class Tasks extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Column(
+        floatingActionButton: FloatingActionButton(
+            onPressed:(){} ,
+          child: Icon(Icons.add_circle),),
+        body: SingleChildScrollView(
+          child: Column(
           children: [
             Row(
               children: [
                 AppBars(),
-                Spacer(),
-                IconButton(onPressed: (){}, icon: Icon(Icons.add_circle)
-                )
+                Spacer()
               ],
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(30, 30, 30, 30),
               child: Align(
                 alignment: Alignment.centerLeft,
-
-              child: Text('Tasks', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
+          
+                child: Text('Tasks', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
+                ),
               ),
-             ),
-           ),
+            ),
             MyContainers(),
             MyContainers(),
             MyContainers(),
             MyContainers(),
           ],
+                ),
         ),
       ),
     );
   }
 }
+
+
+/*
+ٍScaffold(
+          body: Column(
+            children: [
+              Row(
+                children: [
+                  AppBars(),
+                  Spacer(),
+                  IconButton(onPressed: (){}, icon: Icon(Icons.add_circle)
+                  )
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 30, 30, 30),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+
+                child: Text('Tasks', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
+                ),
+               ),
+             ),
+              MyContainers(),
+              MyContainers(),
+              MyContainers(),
+              MyContainers(),
+            ],
+          ),
+        ),
+      ),
+    )
+ */

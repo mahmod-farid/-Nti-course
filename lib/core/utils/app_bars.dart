@@ -14,7 +14,8 @@ class AppBars extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(40),
-            child: SvgPicture(AppAssets.palestin as BytesLoader , width: 60 , height: 60),
+            child: Image.asset(AppAssets.palestin  , width: 60 , height: 60, fit: BoxFit.cover,),
+
           ),
           Padding(
               padding: const EdgeInsetsDirectional.only(start: 20),

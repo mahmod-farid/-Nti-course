@@ -12,6 +12,9 @@ class MyHome extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){Navigator.push(context, MaterialPageRoute(builder:(context) => Tasks()));},
+        child: Icon(Icons.add_circle),),
         body:SingleChildScrollView(
           child: Column(
             children: [
@@ -19,13 +22,6 @@ class MyHome extends StatelessWidget {
                 children: [
                   AppBars(),
                   Spacer(),
-                  IconButton(onPressed: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Tasks()),
-                    );
-                  }, icon: Icon(Icons.add_circle),
-                  ),
                 ],
               ),
               Container(
@@ -33,13 +29,13 @@ class MyHome extends StatelessWidget {
                 child: Text(
                   'There are no tasks yet, \n Press the button To\n add New Task',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 17 , fontWeight: FontWeight.w300),
+                  style: TextStyle(fontSize: 17 , fontWeight: FontWeight.w400),
                 ),
               ),
               Center(
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 268,
+                  height: 278,
                   child: SvgPicture.asset(AppAssets.purple , fit:BoxFit.cover,
                   ),
                 ),
