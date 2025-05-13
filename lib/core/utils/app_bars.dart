@@ -12,11 +12,19 @@ class AppBars extends StatelessWidget {
       padding: const EdgeInsetsDirectional.only(start: 20),
       child: Row(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(40),
-            child: Image.asset(AppAssets.palestin  , width: 60 , height: 60, fit: BoxFit.cover,),
+          // ClipRRect(
+          //   borderRadius: BorderRadius.circular(40),
+          //   child: Image.asset(AppAssets.palestin  , width: 60 , height: 60, fit: BoxFit.cover,),),
+         Container(
+          height: 60,
+           width: 60,
+           decoration: BoxDecoration(
+             shape: BoxShape.circle,
+             image: DecorationImage(image: AssetImage(AppAssets.palestin))
+           ),
+      ),
 
-          ),
+
           Padding(
               padding: const EdgeInsetsDirectional.only(start: 20),
             child: Column(
